@@ -3,32 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exemplo HTML, CSS e DOM</title>
+    <title>Feira das nacoes</title>
 
     <style>
+       
         body {
             margin: 0;
             font-family: Arial, sans-serif;
         }
 
         header {
-            background-color: lightblue;
+            background-color: #A6A867;
             padding: 20px;
         }
 
         nav {
-            background-color: lightgray;
+            background-color: #51513D;
             padding: 15px;
         }
 
         main {
-            background-color: white;
+            background-color: #E3DCC2;
             padding: 20px;
             min-height: 200px;
         }
 
         footer {
-            background-color: gray;
+            background-color: #1B2021;
             padding: 20px;
         }
 
@@ -38,23 +39,24 @@
         }
 
         #bloco1 {
-            background-color: lightcoral;
+            background-color: #E3DCC2;
         }
 
         #bloco2 {
-            background-color: lightgreen;
+            background-color: #E3DC95;
         }
 
         #bloco3 {
-            background-color: lightyellow;
+            background-color: #A6A867;
         }
+
     </style>
 </head>
 
 <body>
 
     <header>
-        <h1>Meu Site</h1>
+        <h1>Feira das Nações</h1>
     </header>
 
     <nav>
@@ -64,58 +66,96 @@
     </nav>
 
     <main id="conteudo">
-        <!-- O JavaScript criará os elementos aqui -->
     </main>
 
     <footer>
         <div class="bloco-footer" id="bloco1">
-            <p>Primeira div do footer</p>
+            <p>Bandeira da Itália</p>
         </div>
 
         <div class="bloco-footer" id="bloco2">
-            <p>Segunda div do footer</p>
+            <p>Bandeira do Japão</p>
         </div>
 
         <div class="bloco-footer" id="bloco3">
-            <p>Terceira div do footer</p>
+            <p>Bandeira da Espanha</p>
         </div>
     </footer>
 
-    <script>
-        // Selecionar o elemento main
-        const main = document.getElementById("conteudo");
+<script>
+    const main = document.getElementById("conteudo");
 
-        // CRIAR UM TÍTULO
-        const titulo = document.createElement("h2");
-        titulo.textContent = "Título criado com JavaScript";
-        main.appendChild(titulo);
+    const titulo = document.createElement("h2");
+    titulo.textContent = "Top 3 Países da Feira das Nações";
+    titulo.style.textAlign = "center";
+    titulo.style.backgroundColor = "#A6A867";
+    main.appendChild(titulo);
 
-        // CRIAR UM PARÁGRAFO
-        const paragrafo = document.createElement("p");
-        paragrafo.textContent = "Este parágrafo foi criado usando o DOM.";
-        main.appendChild(paragrafo);
+    const paragrafo = document.createElement("p");
+    paragrafo.textContent = "Ranking decrescente";
+    paragrafo.style.textAlign = "center";
+    main.appendChild(paragrafo);
 
-        // CRIAR UMA LISTA ORDENADA
-        const lista = document.createElement("ol");
+    const lista = document.createElement("ol");
 
-        // Primeiro item
-        const item1 = document.createElement("li");
-        item1.textContent = "Primeiro item";
-        lista.appendChild(item1);
+    const item1 = document.createElement("li");
+    item1.textContent = "Itália";
+    lista.appendChild(item1);
 
-        // Segundo item
-        const item2 = document.createElement("li");
-        item2.textContent = "Segundo item";
-        lista.appendChild(item2);
+    const italia = document.createElement("p");
+    italia.textContent = "Gostei da sala da Itália pois construiram muitos monumentos de lá, como a Torre de Pisa, o Coliseu, o Circuito de Monza, etc.";
+    lista.appendChild(italia);
 
-        // Terceiro item
-        const item3 = document.createElement("li");
-        item3.textContent = "Terceiro item";
-        lista.appendChild(item3);
+    const item2 = document.createElement("li");
+    item2.textContent = "Japão";
+    lista.appendChild(item2);
 
-        // Adicionar a lista ao main
-        main.appendChild(lista);
-    </script>
+    const japao = document.createElement("p");
+    japao.textContent = "Gostei da sala do Japão devido a sua popularidade, estava sempre cheio de pessoas lá e também gostei do portão japonês que colocaram na entrada da sala.";
+    lista.appendChild(japao);
 
+    const item3 = document.createElement("li");
+    item3.textContent = "Espanha";
+    lista.appendChild(item3);
+
+    const espanha = document.createElement("p");
+    espanha.textContent = "Gostei da sala da Espanha devido aos estádios em miniatura que construiram, como o estádio do Camp Nou e Santiago Bernabeu.";
+    lista.appendChild(espanha);
+
+    main.appendChild(lista);
+
+    const header = document.querySelector("header");
+    header.style.textAlign = "center";
+
+    const nav = document.querySelector("nav");
+    nav.style.display = "flex";
+    nav.style.justifyContent = "center";
+    nav.style.gap = "15px";
+
+    const footer = document.querySelector("footer");
+    footer.style.display = "flex";
+    footer.style.justifyContent = "center";
+
+    const bloco1 = document.getElementById("bloco1");
+    const imagem1 = document.createElement("img");
+    imagem1.src = "https://flagcdn.com/w320/it.png"; 
+    imagem1.style.maxWidth = "100px"; 
+    bloco1.appendChild(imagem1);
+
+
+    const bloco2 = document.getElementById("bloco2");
+    const imagem2 = document.createElement("img");
+    imagem2.src = "https://flagcdn.com/w320/jp.png"; 
+    imagem2.style.maxWidth = "100px";
+    bloco2.appendChild(imagem2);
+
+
+    const bloco3 = document.getElementById("bloco3");
+    const imagem3 = document.createElement("img");
+    imagem3.src = "https://flagcdn.com/w320/es.png"; 
+    imagem3.style.maxWidth = "100px";
+    bloco3.appendChild(imagem3);
+
+</script>
 </body>
 </html>
