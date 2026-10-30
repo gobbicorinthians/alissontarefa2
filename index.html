@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo HTML, CSS e DOM</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: lightblue;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: lightgray;
+            padding: 15px;
+        }
+
+        main {
+            background-color: white;
+            padding: 20px;
+            min-height: 200px;
+        }
+
+        footer {
+            background-color: gray;
+            padding: 20px;
+        }
+
+        .bloco-footer {
+            padding: 15px;
+            margin: 10px;
+        }
+
+        #bloco1 {
+            background-color: lightcoral;
+        }
+
+        #bloco2 {
+            background-color: lightgreen;
+        }
+
+        #bloco3 {
+            background-color: lightyellow;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Meu Site</h1>
+    </header>
+
+    <nav>
+        <a href="#">Início</a>
+        <a href="#">Sobre</a>
+        <a href="#">Contato</a>
+    </nav>
+
+    <main id="conteudo">
+        <!-- O JavaScript criará os elementos aqui -->
+    </main>
+
+    <footer>
+        <div class="bloco-footer" id="bloco1">
+            <p>Primeira div do footer</p>
+        </div>
+
+        <div class="bloco-footer" id="bloco2">
+            <p>Segunda div do footer</p>
+        </div>
+
+        <div class="bloco-footer" id="bloco3">
+            <p>Terceira div do footer</p>
+        </div>
+    </footer>
+
+    <script>
+        // Selecionar o elemento main
+        const main = document.getElementById("conteudo");
+
+        // CRIAR UM TÍTULO
+        const titulo = document.createElement("h2");
+        titulo.textContent = "Título criado com JavaScript";
+        main.appendChild(titulo);
+
+        // CRIAR UM PARÁGRAFO
+        const paragrafo = document.createElement("p");
+        paragrafo.textContent = "Este parágrafo foi criado usando o DOM.";
+        main.appendChild(paragrafo);
+
+        // CRIAR UMA LISTA ORDENADA
+        const lista = document.createElement("ol");
+
+        // Primeiro item
+        const item1 = document.createElement("li");
+        item1.textContent = "Primeiro item";
+        lista.appendChild(item1);
+
+        // Segundo item
+        const item2 = document.createElement("li");
+        item2.textContent = "Segundo item";
+        lista.appendChild(item2);
+
+        // Terceiro item
+        const item3 = document.createElement("li");
+        item3.textContent = "Terceiro item";
+        lista.appendChild(item3);
+
+        // Adicionar a lista ao main
+        main.appendChild(lista);
+    </script>
+
+</body>
+</html>
